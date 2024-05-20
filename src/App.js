@@ -1,11 +1,18 @@
+// project import
+import Routes from './routes';
+import ThemeCustomization from './themes';
+import ScrollTop from './components/ScrollTop';
 
+// ==============================|| APP - THEME, ROUTER, LOCAL  ||============================== //
 
-function App() {
-  return (
-    <div>
-      deneme
-    </div>
-  );
-}
+const App = () => (
+
+  <ThemeCustomization>
+    <ScrollTop>
+      <Routes />
+    </ScrollTop>
+  </ThemeCustomization>
+
+);
 
 export default App;
