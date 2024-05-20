@@ -3,8 +3,8 @@ import { Outlet } from 'react-router-dom';
 // import { useDispatch, useSelector } from 'react-redux';
 
 // material-ui
-import { useTheme } from '@mui/material/styles';
-import { Box, Toolbar, useMediaQuery } from '@mui/material';
+// import { useTheme } from '@mui/material/styles';
+import { Box, Toolbar } from '@mui/material';
 
 // project import
 // import Drawer from './Drawer';
@@ -18,8 +18,8 @@ import { Box, Toolbar, useMediaQuery } from '@mui/material';
 // ==============================|| MAIN LAYOUT ||============================== //
 
 const MainLayout = () => {
-  const theme = useTheme();
-  // const matchDownLG = useMediaQuery(theme.breakpoints.down('lg'));
+  // const theme = useTheme();
+  // // const matchDownLG = useMediaQuery(theme.breakpoints.down('lg'));
   // const dispatch = useDispatch();
 
   // const { drawerOpen } = useSelector((state) => state.menu);
@@ -49,7 +49,7 @@ const MainLayout = () => {
       {/* <Header open={open} handleDrawerToggle={handleDrawerToggle} /> */}
       {/* <Drawer open={open} handleDrawerToggle={handleDrawerToggle} /> */}
       <Box component="main" sx={{ width: '100%', flexGrow: 1, p: { xs: 2, sm: 3 } }}>
-        <Toolbar />
+        {/* <Toolbar /> */}
         denme
         {/* <Breadcrumbs navigation={navigation} title /> */}
         <Outlet />

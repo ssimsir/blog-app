@@ -1,11 +1,10 @@
-import { Outlet } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 
 // ==============================|| MINIMAL LAYOUT ||============================== //
 
-const MinimalLayout = () => (
-  <>
-    <Outlet />
-  </>
-);
+const MinimalLayout = () => {
+  const user  = true
+  return user ? <Outlet /> : <Navigate to="/" />
+};
 
 export default MinimalLayout;

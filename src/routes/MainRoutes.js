@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 
 // project import
-// import Loadable from 'components/Loadable';
+import Loadable from '../components/Loadable';
 import MainLayout from '../layout/MainLayout';
 
 // // render - dashboard
@@ -9,7 +9,7 @@ import MainLayout from '../layout/MainLayout';
 
 // // render - sample page
 // const SamplePage = Loadable(lazy(() => import('pages/extra-pages/SamplePage')));
-
+const SamplePage = Loadable(lazy(() => import('../pages/extra-pages/SamplePage')));
 // // render - utilities
 // const Typography = Loadable(lazy(() => import('../pages/components-overview/Typography')));
 // const Color = Loadable(lazy(() => import('../pages/components-overview/Color')));
@@ -18,9 +18,9 @@ import MainLayout from '../layout/MainLayout';
 
 // ==============================|| MAIN ROUTING ||============================== //
 
-const MainRoutes = {
-  path: '/',
-  element: <MainLayout />,
+const MainRoutes = [{
+  path: '',
+  element: <SamplePage />,
   // children: [
   //   {
   //     path: '/',
@@ -56,6 +56,6 @@ const MainRoutes = {
   //     element: <AntIcons />
   //   }
   // ]
-};
+}];
 
 export default MainRoutes;
