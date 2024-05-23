@@ -47,16 +47,27 @@ const AuthLogin = () => {
     <>
       <Formik
         initialValues={{
-          email: 'info@codedthemes.com',
-          password: '123456',
+          username: 'sdk@gmail.com',
+          password: 'Sdk1234@',
           submit: null
         }}
         validationSchema={Yup.object().shape({
-          email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
+          username: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
           password: Yup.string().max(255).required('Password is required')
         })}
         onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
           try {
+            console.log(values)
+          const res = await fetch("https://30127.fullstack.clarusway.com/auth/login", {
+            method:"POST",
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body:JSON.stringify(values),
+          })
+          console.log(res)
+
+          
             setStatus({ success: false });
             setSubmitting(false);
           } catch (err) {
@@ -75,8 +86,8 @@ const AuthLogin = () => {
                   <OutlinedInput
                     id="email-login"
                     type="email"
-                    value={values.email}
-                    name="email"
+                    value={values.username}
+                    name="username"
                     onBlur={handleBlur}
                     onChange={handleChange}
                     placeholder="Enter email address"
