@@ -2,7 +2,7 @@ import { lazy } from 'react';
 
 // project import
 import Loadable from '../components/Loadable';
-import MainLayout from '../layout/MainLayout';
+import Blogs from '../pages/blogs/Blogs';
 
 // // render - dashboard
 // const DashboardDefault = Loadable(lazy(() => import('pages/dashboard')));
@@ -56,6 +56,11 @@ const MainRoutes = [{
   //     element: <AntIcons />
   //   }
   // ]
-}];
+},
+    {
+      path: 'blogs',
+      element: <Blogs />
+    }
+];
 
 export default MainRoutes;

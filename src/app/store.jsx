@@ -25,7 +25,7 @@ import blogReducer from "../features/blogSlice"
 const store = configureStore({
   reducer: {
     //auth: persistedReducer,
-    stock: blogReducer,
+    blog: blogReducer,
   },
 //   middleware: (getDefaultMiddleware) =>
 //     getDefaultMiddleware({
